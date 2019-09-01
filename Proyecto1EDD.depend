@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1566796139 source:c:\users\jeany\documents\archivos_c++\proyecto1edd\main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<stdlib.h>
+
+1567289216 source:c:\users\jeany\documents\archivos_c++\proyecto1edd\src\inicialnodocabecera.cpp
+	"InicialNodoCabecera.h"
+
+1567307820 c:\users\jeany\documents\archivos_c++\proyecto1edd\include\inicialnodocabecera.h
+
+1567307675 source:c:\users\jeany\documents\archivos_c++\proyecto1edd\src\listainicialcabecera.cpp
+	"ListaInicialCabecera.h"
+	"InicialNodoCabecera.h"
+
+1567307675 c:\users\jeany\documents\archivos_c++\proyecto1edd\include\listainicialcabecera.h
+	"InicialNodoCabecera.h"
+
