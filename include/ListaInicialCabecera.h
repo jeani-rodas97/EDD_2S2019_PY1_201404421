@@ -7,11 +7,13 @@ typedef int Dato;
 class ListaInicialCabecera
 {
     public:
+        InicialNodoCabecera* primero;
         ListaInicialCabecera();
         CrearLista(int Dato);
+        InsertarOrd(Dato Entrada);
 
     protected:
-        InicialNodoCabecera* primero;
+
 
     private:
 };

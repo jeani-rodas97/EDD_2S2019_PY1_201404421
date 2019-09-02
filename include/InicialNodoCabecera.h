@@ -8,18 +8,12 @@ class InicialNodoCabecera
     public:
         InicialNodoCabecera(Dato t);
         InicialNodoCabecera(Dato p, InicialNodoCabecera* n);
-        Dato datoNodo() const
-        {
-            return dato;
-        }
+        int datoNodo() const;
         InicialNodoCabecera* enlaceNodo() const
         {
             return enlace;
         }
-        void PonerEnlace(InicialNodoCabecera* sig)
-        {
-            enlace = sig;
-        }
+        PonerEnlace(InicialNodoCabecera* sig);
     protected: //Almacenamiento
         Dato dato;
         InicialNodoCabecera* enlace;

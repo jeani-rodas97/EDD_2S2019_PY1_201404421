@@ -12,4 +12,12 @@ InicialNodoCabecera::InicialNodoCabecera(Dato p, InicialNodoCabecera* n)
     enlace = n;
 }
 
+int InicialNodoCabecera::datoNodo() const
+{
+    return dato;
+}
 
+InicialNodoCabecera::PonerEnlace(InicialNodoCabecera* sig)
+{
+    enlace = sig;
+}
