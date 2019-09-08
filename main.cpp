@@ -3,11 +3,13 @@
 #include <sstream>  //Para usar streamstring
 #include <string>   //Para reconocer string
 #include <stdlib.h> //Para limpiar la consola
+#include <ListaInicialCabecera.h>
 
 using namespace std;
 
 int main()
 {
+    ListaInicialCabecera ListaInicial;
     int seleccion;
     string Archivo, ruta;
     cout << "%%%%%%%%%%%%%%%%%%%% MENU %%%%%%%%%%%%%%%%%%%%"<< endl;
@@ -29,6 +31,10 @@ int main()
         leer.open(Archivo.c_str(), ios::in);
         while(leer.good())
         {
+            string NumCapa;
+            string NameCapa;
+            getline(leer,NumCapa,',');
+            getline(leer,NameCapa,',');
             for(string linea; getline(leer, linea);)
             {
                 stringstream registro(linea);

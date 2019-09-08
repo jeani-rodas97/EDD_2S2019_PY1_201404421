@@ -12,7 +12,7 @@ ListaInicialCabecera::CrearLista(int x)
     primero = new InicialNodoCabecera(x, primero);
 }
 
-ListaInicialCabecera::InsertarOrd(Dato entrada)
+ListaInicialCabecera::InsertarOrd(int entrada)
 {
     InicialNodoCabecera* Nuevo;
     Nuevo = new InicialNodoCabecera(entrada);

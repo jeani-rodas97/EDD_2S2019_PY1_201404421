@@ -10,7 +10,7 @@ class ListaInicialCabecera
         InicialNodoCabecera* primero;
         ListaInicialCabecera();
         CrearLista(int Dato);
-        InsertarOrd(Dato Entrada);
+        InsertarOrd(int Entrada);
 
     protected:
 
