@@ -1,18 +1,19 @@
 # depslib dependency file v1.0
-1567564913 source:c:\users\jeany\documents\archivos_c++\proyecto1edd\main.cpp
+1568333922 source:c:\users\jeany\documents\archivos_c++\proyecto1edd\main.cpp
 	<iostream>
 	<fstream>
 	<sstream>
 	<string>
 	<stdlib.h>
 	<ListaInicialCabecera.h>
+	<NodoConfig.h>
 
-1567396106 source:c:\users\jeany\documents\archivos_c++\proyecto1edd\src\inicialnodocabecera.cpp
+1568332661 source:c:\users\jeany\documents\archivos_c++\proyecto1edd\src\inicialnodocabecera.cpp
 	"InicialNodoCabecera.h"
 
-1567396107 c:\users\jeany\documents\archivos_c++\proyecto1edd\include\inicialnodocabecera.h
+1568332616 c:\users\jeany\documents\archivos_c++\proyecto1edd\include\inicialnodocabecera.h
 
-1567560893 source:c:\users\jeany\documents\archivos_c++\proyecto1edd\src\listainicialcabecera.cpp
+1568332724 source:c:\users\jeany\documents\archivos_c++\proyecto1edd\src\listainicialcabecera.cpp
 	"ListaInicialCabecera.h"
 	"InicialNodoCabecera.h"
 
@@ -33,4 +34,15 @@
 
 1567824795 c:\users\jeany\documents\archivos_c++\proyecto1edd\include\nodo.h
 	<string>
+
+1567841301 source:c:\users\jeany\documents\archivos_c++\proyecto1edd\src\nodosimple.cpp
+	"NodoSimple.h"
+
+1567989005 c:\users\jeany\documents\archivos_c++\proyecto1edd\include\nodosimple.h
+	<string>
+
+1568306708 source:c:\users\jeany\documents\archivos_c++\proyecto1edd\src\nodoconfig.cpp
+	"NodoConfig.h"
+
+1568306533 c:\users\jeany\documents\archivos_c++\proyecto1edd\include\nodoconfig.h
 

@@ -1,11 +1,12 @@
 #ifndef NODOSIMPLE_H
 #define NODOSIMPLE_H
+#include<string>
 
 
 class NodoSimple
 {
     public:
-        int num;
+        std::string dato;
         NodoSimple();
 
     protected:
