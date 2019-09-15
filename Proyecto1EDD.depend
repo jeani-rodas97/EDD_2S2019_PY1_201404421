@@ -1,12 +1,13 @@
 # depslib dependency file v1.0
-1568385640 source:c:\users\jeany\documents\archivos_c++\proyecto1edd\main.cpp
+1568565298 source:c:\users\jeany\documents\archivos_c++\proyecto1edd\main.cpp
 	<iostream>
 	<fstream>
 	<sstream>
 	<string>
 	<stdlib.h>
-	<ListaInicialCabecera.h>
 	<NodoConfig.h>
+	<cctype>
+	<bits/stdc++.h>
 
 1568332661 source:c:\users\jeany\documents\archivos_c++\proyecto1edd\src\inicialnodocabecera.cpp
 	"InicialNodoCabecera.h"
