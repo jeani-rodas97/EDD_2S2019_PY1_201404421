@@ -22,7 +22,8 @@ int main()
     int seleccion;
     int NumCapa; string NameArchivo; //Archivo Inicial
     int Ancho, Alto, PixAncho, PixAlto; //Configuration
-    int ids=0;
+    int ids=0, datoC;
+    int DatoConfig[3];
     char nombres[20];
     char DConfi[20];
     char simb = ';';
@@ -59,9 +60,10 @@ int main()
                 Name = inicio.nombre;
                 cout<<"id "<< inicio.id;
                 cout<<" name " << inicio.nombre << endl;
-                if(Name == "config.csv")
+                if(inicio.id == 0)
                 {
                     RutaAux = Ruta + "/" + Name;
+                    cout<<RutaAux<<endl;
                     ifstream leerConfig;
                     leerConfig.open(RutaAux.c_str(), ios::in);
                     while(leerConfig.good())
@@ -69,11 +71,16 @@ int main()
                         for(string lineaConfig; getline(leerConfig, lineaConfig);)
                         {
                             stringstream registro(lineaConfig);
-                            for(string dato; getline(registro, dato, ';');)
+                            for(string dato; getline(registro, dato, ',');)
                             {
                                 strcpy(DConfi,dato.c_str());
                                 if(std::isdigit(*DConfi))
-                                cout<<DConfi<<endl;
+                                {
+                                    cout<<DConfi<<" "<<dato<<endl;
+                                    istringstream(dato)>>datoC;
+                                    DatoConfig[ids]=datoC;
+                                    ids+=1;
+                                }
                             }
                         }
                     }
@@ -82,6 +89,10 @@ int main()
             }
         }
         leer.close();
+        cout<<DatoConfig[0]<<DatoConfig[1]<<DatoConfig[2]<<DatoConfig[3]<<endl;
+        main();
     }
+
+
     return 0;
 }
