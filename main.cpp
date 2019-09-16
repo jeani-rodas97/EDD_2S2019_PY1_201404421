@@ -84,12 +84,33 @@ int main()
                             }
                         }
                     }
+                    NodoConfig *NC = new NodoConfig(DatoConfig[0],DatoConfig[1],DatoConfig[2],DatoConfig[3]);
+                    cout<<DatoConfig[0]<<DatoConfig[1]<<DatoConfig[2]<<DatoConfig[3]<<endl;
                     leerConfig.close();
+                }
+                else
+                {
+                    RutaAux = Ruta + "/" + Name;
+                    cout<<RutaAux<<endl;
+                    ifstream leerCsv;
+                    leerCsv.open(RutaAux.c_str(), ios::in);
+                    while(leerCsv.good())
+                    {
+                        for(string lineaCsv; getline(leerCsv, lineaCsv);)
+                        {
+                            stringstream registro(lineaCsv);
+                            for(string dato; getline(registro, dato, ',');)
+                            {
+                                cout << dato << '\t';
+                            }
+                            cout << '\n';
+                        }
+                    }
                 }
             }
         }
         leer.close();
-        cout<<DatoConfig[0]<<DatoConfig[1]<<DatoConfig[2]<<DatoConfig[3]<<endl;
+
         main();
     }
 
