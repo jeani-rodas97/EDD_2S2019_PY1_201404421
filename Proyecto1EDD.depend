@@ -1,11 +1,13 @@
 # depslib dependency file v1.0
-1568600776 source:c:\users\jeany\documents\archivos_c++\proyecto1edd\main.cpp
+1569028729 source:c:\users\jeany\documents\archivos_c++\proyecto1edd\main.cpp
 	<iostream>
 	<fstream>
 	<sstream>
 	<string>
 	<stdlib.h>
 	<NodoConfig.h>
+	<ArbolImg.h>
+	"ListaImagenes.h"
 	<bits/stdc++.h>
 
 1568332661 source:c:\users\jeany\documents\archivos_c++\proyecto1edd\src\inicialnodocabecera.cpp
@@ -28,7 +30,7 @@
 1567824795 source:c:\users\jeany\documents\archivos_c++\proyecto1edd\include\nodo.h
 	<string>
 
-1567824771 source:c:\users\jeany\documents\archivos_c++\proyecto1edd\src\nodo.cpp
+1568730655 source:c:\users\jeany\documents\archivos_c++\proyecto1edd\src\nodo.cpp
 	"Nodo.h"
 	<string>
 
@@ -41,8 +43,29 @@
 1567989005 c:\users\jeany\documents\archivos_c++\proyecto1edd\include\nodosimple.h
 	<string>
 
-1568306708 source:c:\users\jeany\documents\archivos_c++\proyecto1edd\src\nodoconfig.cpp
+1568738609 source:c:\users\jeany\documents\archivos_c++\proyecto1edd\src\nodoconfig.cpp
 	"NodoConfig.h"
+	<string>
 
-1568306533 c:\users\jeany\documents\archivos_c++\proyecto1edd\include\nodoconfig.h
+1568863992 c:\users\jeany\documents\archivos_c++\proyecto1edd\include\nodoconfig.h
+	<string>
+
+1569028109 source:c:\users\jeany\documents\archivos_c++\proyecto1edd\src\listaimagenes.cpp
+	"ListaImagenes.h"
+	<iostream>
+	<string>
+	<NodoConfig.h>
+
+1569003264 c:\users\jeany\documents\archivos_c++\proyecto1edd\include\listaimagenes.h
+	<NodoConfig.h>
+
+1568738621 source:c:\users\jeany\documents\archivos_c++\proyecto1edd\src\arbolimg.cpp
+	"ArbolImg.h"
+	<iostream>
+	<string>
+	<NodoConfig.h>
+
+1568831275 c:\users\jeany\documents\archivos_c++\proyecto1edd\include\arbolimg.h
+	<string>
+	<NodoConfig.h>
 

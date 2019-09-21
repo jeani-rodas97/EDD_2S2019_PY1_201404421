@@ -1,10 +1,12 @@
 #include <iostream>
-#include <fstream>  //Para usar ifstream y leer el archivo
-#include <sstream>  //Para usar streamstring
-#include <string>   //Para reconocer string
-#include <stdlib.h> //Para limpiar la consola
+#include <fstream>  ///Para usar ifstream y leer el archivo
+#include <sstream>  ///Para usar streamstring
+#include <string>   ///Para reconocer string
+#include <stdlib.h> ///Para limpiar la consola
 #include <NodoConfig.h>
-#include<bits/stdc++.h> //Para usar el strcpy que copia los datos
+#include <ArbolImg.h>
+#include "ListaImagenes.h"
+#include<bits/stdc++.h> ///Para usar el strcpy que copia los datos
 
 using namespace std;
 int Id = 0;
@@ -19,16 +21,18 @@ struct MiArchivo
 int main()
 {
     MiArchivo inicio;
-    int seleccion;
-    int NumCapa; string NameArchivo; //Archivo Inicial
-    int Ancho, Alto, PixAncho, PixAlto; //Configuration
+    int seleccion, seleccionReport;
+    int NumCapa; string NameArchivo; ///Archivo Inicial
+    int Ancho, Alto, PixAncho, PixAlto; ///Configuration
     int ids=0, datoC;
     int DatoConfig[3];
-    char nombres[20];
+    char* nombres;
     char DConfi[20];
     char simb = ';';
-    string Archivo, Carpeta, RutaAux; //Para acceder al archivo
-    string Ruta= "C:/Users/Jeany/Documents/Archivos_C++/Proyecto1EDD/"; //Para tener una ruta dinamica
+    string Archivo, Carpeta, RutaAux; ///Para acceder al archivo
+    string Ruta= "C:/Users/Jeany/Documents/Archivos_C++/Proyecto1EDD/"; ///Para tener una ruta dinamica
+    ListaImagenes *image = new ListaImagenes;
+    ListaImagenes imagen;
     cout << "%%%%%%%%%%%%%%%%%%%% MENU %%%%%%%%%%%%%%%%%%%%"<< endl;
     cout << "1. Insert image. "<< endl;
     cout << "2. Select -image. "<< endl;
@@ -38,9 +42,8 @@ int main()
     cout << "6. Reports. "<< endl;
     cin >> seleccion;
     system("cls");
-    switch(seleccion)
+    if (seleccion == 1)
     {
-    case 1:
         cout << "%%%%%%%%%%%%%%%%%%%% IMAGES %%%%%%%%%%%%%%%%%%%%"<< endl;
         cout << "Ingrese el nombre de la carpeta"<<endl;
         cin >> Carpeta;
@@ -84,8 +87,11 @@ int main()
                             }
                         }
                     }
-                    NodoConfig *NC = new NodoConfig(DatoConfig[0],DatoConfig[1],DatoConfig[2],DatoConfig[3]);
+                    NodoConfig *NC = new NodoConfig(Carpeta, DatoConfig[0],DatoConfig[1],DatoConfig[2],DatoConfig[3]);
                     cout<<DatoConfig[0]<<DatoConfig[1]<<DatoConfig[2]<<DatoConfig[3]<<endl;
+                    cout<<"Nombre de la carpeta"<<Carpeta<<endl;
+                    imagen.InsertarConfig(Carpeta, DatoConfig[0], DatoConfig[1], DatoConfig[2], DatoConfig[3]);
+                    //InsertarConfig(Carpeta, DatoConfig[0], DatoConfig[1], DatoConfig[2], DatoConfig[3]);
                     leerConfig.close();
                 }
                 else
@@ -102,18 +108,46 @@ int main()
                             for(string dato; getline(registro, dato, ',');)
                             {
                                 cout << dato << '\t';
+                                //Reconoce la cantidad de columnas, aumenta x
                             }
                             cout << '\n';
+                            //Crea las filas, si aumenta, aumenta y
                         }
+                        cout<<"lee csv "<<endl;
                     }
+                    leerCsv.close();
                 }
             }
         }
         leer.close();
-
         main();
     }
-
+    else if(seleccion == 2)
+    {
+        cout<<"LLega a la seleccion"<<endl;
+        imagen.Mostrar();
+        main();
+    }
+    else if(seleccion == 6)
+    {
+        cout << "%%%%%%%%%%%%%%%%%%%% MENU REPORTES %%%%%%%%%%%%%%%%%%%%"<< endl;
+        cout << "1. Imported image report"<< endl;
+        cout << "2. Select -image. "<< endl;
+        cout << "3. Apply Filters. " << endl;
+        cout << "4. Manual Editing."<< endl;
+        cout << "5. Export image. " << endl;
+        cout << "6. Reports. "<< endl;
+        cin >> seleccionReport;
+        system("cls");
+        if(seleccionReport = 1)
+        {
+            ofstream ImgFile;
+            ImgFile.open("ReporteImg.txt");
+            ImgFile <<"digraph g: { rankdir=LR;"<<endl;
+            ImgFile.close();
+            main();
+        }
+    }
 
     return 0;
 }

@@ -34,11 +34,17 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/ArbolImg.h" />
+		<Unit filename="include/ListaImagenes.h" />
+		<Unit filename="include/Matriz.h" />
 		<Unit filename="include/Nodo.h">
 			<Option compile="1" />
 		</Unit>
 		<Unit filename="include/NodoConfig.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/ArbolImg.cpp" />
+		<Unit filename="src/ListaImagenes.cpp" />
+		<Unit filename="src/Matriz.cpp" />
 		<Unit filename="src/Nodo.cpp" />
 		<Unit filename="src/NodoConfig.cpp" />
 		<Extensions>
